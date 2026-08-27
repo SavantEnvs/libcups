@@ -1,0 +1,9 @@
+project: savantenvs/libcups
+target: fuzzipp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzipp/testsuite
+cmds:
+  - cmd: /mayhem/fuzzipp
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzzipp.dict
