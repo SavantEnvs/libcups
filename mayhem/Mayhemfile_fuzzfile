@@ -1,0 +1,8 @@
+project: savantenvs/libcups
+target: fuzzfile
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzfile/testsuite
+cmds:
+  - cmd: /mayhem/fuzzfile
+    libfuzzer: true
